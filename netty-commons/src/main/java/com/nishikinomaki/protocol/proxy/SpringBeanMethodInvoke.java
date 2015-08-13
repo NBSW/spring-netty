@@ -98,7 +98,7 @@ public class SpringBeanMethodInvoke {
             }
             return (ProtocolMessage) callMethod.invoke(service, args);
         }catch (Exception e){
-            logger.warn("SpringBeanMethodInvoke error", e.getMessage());
+            logger.error("SpringBeanMethodInvoke error", e);
             return ProtocolMessageUtil.errorMessage(-1, e.getMessage());
         }
 
